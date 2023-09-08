@@ -1,0 +1,265 @@
+@font-face {
+  font-family: Ost;
+  src: url("../fonts/OstrichSans-Light.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// ! Variablen
+
+$font-color: #fff;
+$light-bg: #1a1a1a;
+$dark-bg: #121212;
+$font-weight: 100;
+
+// ! Klassen
+
+.centerPosition {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.a-style {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  color: $font-color;
+  font-weight: bolder;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.h2-styling {
+  font-weight: $font-weight;
+  font-size: 5rem;
+  letter-spacing: 20px;
+  margin-bottom: 5vh;
+}
+
+.p-styling {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+//! General
+
+html {
+  font-family: Ost;
+  font-size: 62.5%;
+  color: $font-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+//- Header
+
+header {
+  background: url("../img/FJ_home_slider2.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+
+  h1 {
+    font-size: 20rem;
+    text-align: center;
+    padding-top: 20vh;
+  }
+}
+
+// - Section Experience
+
+.experience {
+  background-color: $light-bg;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 2rem;
+    padding-top: 5vh;
+    margin-bottom: 15vh;
+    letter-spacing: 10px;
+    font-weight: $font-weight;
+  }
+
+  h2 {
+    @extend .centerPosition;
+    @extend .h2-styling;
+    top: 30vh;
+    z-index: 3;
+  }
+
+  img {
+    width: 40vh;
+    z-index: 2;
+  }
+
+  .linie {
+    @extend .centerPosition;
+    top: 50vh;
+    z-index: 1;
+    height: 1px;
+    width: 80vw;
+    background-color: $font-color;
+  }
+
+  a {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    color: $font-color;
+
+    font-weight: bolder;
+    margin-bottom: 15vh;
+    padding-top: 5vh;
+    @extend .a-style;
+    img {
+      width: 3vw;
+      padding-bottom: 1vh;
+    }
+  }
+}
+
+.currated {
+  position: relative;
+  background-color: $dark-bg;
+  text-align: center;
+  padding-top: 10vh;
+  h2 {
+    @extend .h2-styling;
+  }
+  p {
+    @extend .p-styling;
+    // position: relative;
+
+    // margin-bottom: 15vh;
+    // z-index: 5;
+  }
+  .images {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // z-index: 4;
+    padding-top: 5vh;
+    img {
+      width: 20vw;
+      &:nth-of-type(2) {
+        // position: absolute;
+        // top: -20vh;
+        // margin: 0 5vw;
+        margin-bottom: 35vh;
+      }
+    }
+  }
+}
+
+.partnership {
+  background-color: $light-bg;
+  text-align: center;
+  h2 {
+    @extend .h2-styling;
+  }
+  p {
+    @extend .p-styling;
+    margin-bottom: 5vh;
+  }
+  .anime {
+    overflow: hidden;
+    text-align: center;
+    p {
+      width: 700vw;
+      display: inline-block;
+      margin: 0;
+      font-size: 5rem;
+      letter-spacing: 25px;
+      transition: 5s ease-in-out;
+      animation: rolling 10s infinite alternate;
+      &:nth-of-type(2) {
+        color: rgba(255, 255, 255, 0.8);
+        animation: rolling 15s infinite alternate;
+      }
+      &:nth-of-type(3) {
+        color: rgba(255, 255, 255, 0.6);
+        animation: rolling 20s infinite alternate;
+      }
+      &:nth-of-type(4) {
+        color: rgba(255, 255, 255, 0.4);
+        animation: rolling 25s infinite alternate;
+        margin-bottom: 20vh;
+      }
+    }
+  }
+}
+
+.showroom {
+  background-color: $dark-bg;
+
+  padding: 10vh 15vw;
+  .image-big {
+    background: url("../img/Imanoglou_About_Photo_4.jpg") no-repeat center;
+    background-size: cover;
+    height: 40vw;
+    margin: 0 auto;
+    position: relative;
+
+    .room-content {
+      position: relative;
+      display: flex;
+
+      margin-right: 5vw;
+      align-items: flex-end;
+      flex-direction: column;
+      padding-top: 20vh;
+
+      h2 {
+        position: absolute;
+        right: -20vw;
+
+        @extend .h2-styling;
+        font-size: 8rem;
+        letter-spacing: 50px;
+        top: 5vh;
+      }
+
+      p {
+        @extend .p-styling;
+        text-align: left;
+        margin-bottom: 5vh;
+      }
+      a {
+        @extend .a-style;
+        img {
+          width: 3vw;
+          padding-bottom: 1vh;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rolling {
+  0% {
+    transform: translateX(-150vw);
+  }
+
+  50% {
+    transform: translateX(-10vw);
+  }
+
+  100% {
+    transform: translateX(-150vw);
+  }
+}
