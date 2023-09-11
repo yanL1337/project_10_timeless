@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-.a-style, .showroom .image-big .room-content a, .experience a {
+.a-style, .news a, .showroom .image-big .room-content a, .experience a {
   font-size: 3rem;
   letter-spacing: 10px;
   color: #fff;
@@ -24,18 +24,18 @@
   transition: 0.5s ease-in-out;
   text-decoration: none;
 }
-.a-style:hover, .showroom .image-big .room-content a:hover, .experience a:hover {
+.a-style:hover, .news a:hover, .showroom .image-big .room-content a:hover, .experience a:hover {
   transform: scale(1.2);
 }
 
-.h2-styling, .showroom .image-big .room-content h2, .partnership h2, .currated h2, .experience h2 {
+.h2-styling, .news .images .text-and-img h2, .news h2, .showroom .image-big .room-content h2, .partnership h2, .currated h2, .experience h2 {
   font-weight: 100;
   font-size: 5rem;
   letter-spacing: 20px;
   margin-bottom: 5vh;
 }
 
-.p-styling, .showroom .image-big .room-content p, .partnership p, .currated p {
+.p-styling, .news p, .showroom .image-big .room-content p, .partnership p, .currated p {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 3px;
@@ -61,6 +61,7 @@ header h1 {
   font-size: 20rem;
   text-align: center;
   padding-top: 20vh;
+  width: fit-content;
 }
 
 .experience {
@@ -94,9 +95,6 @@ header h1 {
   background-color: #fff;
 }
 .experience a {
-  font-size: 3rem;
-  letter-spacing: 10px;
-  color: #fff;
   font-weight: bolder;
   margin-bottom: 15vh;
   padding-top: 5vh;
@@ -114,6 +112,7 @@ header h1 {
 }
 .currated .images {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding-top: 5vh;
@@ -169,10 +168,12 @@ header h1 {
   height: 40vw;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 20vh;
 }
 .showroom .image-big .room-content {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin-right: 5vw;
   align-items: flex-end;
   flex-direction: column;
@@ -192,6 +193,68 @@ header h1 {
 .showroom .image-big .room-content a img {
   width: 3vw;
   padding-bottom: 1vh;
+}
+
+.news {
+  background-color: #1a1a1a;
+  text-align: center;
+}
+.news p {
+  margin-bottom: 5vh;
+}
+.news .images {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  padding-top: 5vh;
+}
+.news .images .img-wrapper {
+  overflow: hidden;
+}
+.news .images img {
+  width: 30vw;
+  transition: 0.5s ease-in-out;
+}
+.news .images img:hover {
+  transform: scale(1.2);
+}
+.news .images .text-and-img {
+  margin-bottom: 10vh;
+}
+.news .images .text-and-img h2 {
+  z-index: 2;
+  width: fit-content;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh;
+}
+.socials .contact {
+  word-spacing: 20px;
+}
+.socials .contact a {
+  color: #000;
+  text-decoration: none;
+  font-size: 3rem;
+  transition: 0.5s ease-in-out;
+}
+.socials .contact a:hover {
+  transform: scale(1.2);
+  text-decoration: underline 1px #000;
+}
+.socials .ig-fb {
+  letter-spacing: 2vw;
+}
+.socials .ig-fb img:hover {
+  cursor: pointer;
+  border-bottom: 2px solid black;
 }
 
 @keyframes rolling {

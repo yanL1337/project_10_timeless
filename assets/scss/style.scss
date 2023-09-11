@@ -74,6 +74,7 @@ header {
     font-size: 20rem;
     text-align: center;
     padding-top: 20vh;
+    width: fit-content;
   }
 }
 
@@ -84,6 +85,7 @@ header {
   position: relative;
   text-align: center;
   display: flex;
+
   flex-direction: column;
   align-items: center;
 
@@ -117,10 +119,6 @@ header {
   }
 
   a {
-    font-size: 3rem;
-    letter-spacing: 10px;
-    color: $font-color;
-
     font-weight: bolder;
     margin-bottom: 15vh;
     padding-top: 5vh;
@@ -150,6 +148,7 @@ header {
   .images {
     // position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     // z-index: 4;
@@ -214,11 +213,11 @@ header {
     height: 40vw;
     margin: 0 auto;
     position: relative;
-
+    margin-bottom: 20vh;
     .room-content {
       position: relative;
       display: flex;
-
+      flex-wrap: wrap;
       margin-right: 5vw;
       align-items: flex-end;
       flex-direction: column;
@@ -245,6 +244,87 @@ header {
           width: 3vw;
           padding-bottom: 1vh;
         }
+      }
+    }
+  }
+}
+
+.news {
+  background-color: $light-bg;
+  text-align: center;
+  h2 {
+    @extend .h2-styling;
+  }
+  p {
+    @extend .p-styling;
+    margin-bottom: 5vh;
+  }
+  a {
+    @extend .a-style;
+  }
+  .images {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    // z-index: 4;
+    padding-top: 5vh;
+    .img-wrapper {
+      overflow: hidden;
+    }
+    img {
+      width: 30vw;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .text-and-img {
+      // position: absolute;
+      // top: -20vh;
+      // margin: 0 5vw;
+      // padding-bottom: 5vh;
+      margin-bottom: 10vh;
+
+      h2 {
+        @extend .h2-styling;
+        z-index: 2;
+        width: fit-content;
+        letter-spacing: 10px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh;
+
+  .contact {
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 3rem;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+        text-decoration: underline 1px #000;
+      }
+    }
+    word-spacing: 20px;
+  }
+  .ig-fb {
+    letter-spacing: 2vw;
+    img {
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid black;
       }
     }
   }
